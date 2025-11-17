@@ -1,0 +1,124 @@
+
+/* normalize box sizing */
+*, *::before, *::after { box-sizing: border-box; }
+
+.footer {
+  background: var(--footer-bg);
+  color: var(--text);
+  width: 100%;
+  padding: 32px 5%;
+  font-family: 'Inter', sans-serif;
+  cursor: default;
+}
+
+/* Grid layout */
+.footer-top {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+  grid-template-columns: 1.25fr 1fr 1fr 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* BRAND */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* left align on desktop */
+}
+
+.brand-names {
+  display: flex;
+  gap: 12px;
+  align-items: center;       /* vertically center icon + title */
+  justify-content: flex-start;
+}
+
+.brand-names i {
+  color: var(--accent);
+  font-size: 1.6rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-title {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* short description under brand */
+.brand-tag {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 8px 0 0 0;
+}
+
+/* Headings for columns */
+.about h3, .customer h3, .connect h3, .brand-title {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+
+/* lists */
+.about ul, .customer ul {
+  padding: 0;
+  margin: 0;
+}
+.about li, .customer li {
+  list-style: none;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.about li a, .customer li a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color .15s ease;
+}
+.about li a:hover, .customer li a:hover {
+  color: var(--accent-strong);
+}
+
+/* social icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  font-size: 1.15rem;
+}
+.social-icons i {
+  transition: color .15s ease;
+}
+.social-icons i:hover {
+  color: var(--accent-strong);
+  cursor: pointer;
+}
+
+/* Small improvements: consistent spacing inside footer */
+.footer-top > div { padding-top: 4px; }
+
+/* -------- Responsive breakpoints -------- */
+@media (max-width: 1024px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer { padding: 28px 5%; }
+}
+
+@media (max-width: 640px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: center;
+  }
+  .brand { align-items: center; }   /* center brand on mobile */
+  .brand-names { justify-content: center; }
+  .brand-tag { padding-top: 8px; font-size: 14px; }
+  .about h3, .customer h3, .connect h3 { text-align: center; }
+  .social-icons { justify-content: center; margin-top: 6px; }
+  .footer { padding: 20px 4%; }
+}

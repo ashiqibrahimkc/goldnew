@@ -1,0 +1,127 @@
+
+.navbar {
+  width: 100%;
+  background-color: var(--footer-bg);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+.navbar-top {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+  background-color: #1d0f35;
+  color: var(--top-color); ;
+}
+.nav-under{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+}
+.nav-left{
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  font-weight: bold;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.logo i {
+  color: var(--accent);
+  font-size: 1.5rem;  
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+}
+.nav-right{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
+.search{
+  position: relative;
+}
+.search input {
+  background-color: var(--background);
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  color: var(--white);
+  outline: none;
+}
+.search i {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  color: var(--white);
+}
+.right-icon{
+  display: flex;
+  gap:20px;
+}
+.fav {
+  cursor: pointer;
+  background-color: var(--background);
+  padding: 7px;
+  border-radius: 50%;
+}
+.cart {
+  cursor: pointer;
+  background-color: var(--background);
+  padding: 7px;
+  border-radius: 50%;
+}
+.profile{
+   cursor: pointer;
+  background-color: var(--background);
+  padding: 7px;
+  border-radius: 50%;
+}
+.bar{
+   cursor: pointer;
+  background-color: var(--background);
+  padding: 7px;
+  border-radius: 50%;
+  display: none;
+}
+.fav:hover,
+.cart:hover,
+.profile:hover,
+.bar:hover{
+  color: var(--accent);
+}
+@media (max-width:970px){
+  .right-icon .fav,.cart,.profile,.search{
+    display: none;
+  }
+  .nav-links{
+    display: none;
+  }
+  .bar{
+    display:flex
+  }
+}
+@media (max-width:640px){
+  .logo i{
+    font-size: 1em;
+  }
+  .logo h3{
+    font-size: 1rem;
+  }
+  .search input{
+    width: 200px
+  }
+}

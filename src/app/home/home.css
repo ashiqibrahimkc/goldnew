@@ -1,0 +1,237 @@
+.main{
+  background-color: var(--footer-bg);
+  cursor: default;
+}
+img{
+  width: 100%; 
+  height: 70vh;
+  border-radius: 1.5%;
+  position: relative;
+}
+.banner-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.banner-text h1{
+  font-size: 5em;
+  margin-bottom: 10px;
+  font-family: var(--b);
+  font-weight: extra-bold;
+} 
+.banner-text p{
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-family: var(--b);
+  font-weight: regular;
+}
+.banner-text button{
+  padding: 10px 20px;
+  font-size: 1em;
+  color: var(--whiote);
+  background-color: var(--accent);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.banner-text button:hover{
+  color: var(--top-color);
+}
+.banner{
+  padding: 1.5% 1%;
+}
+
+
+/* --------------------------------------- */
+/* category */
+.category{
+  padding: 0 2%;
+}
+
+.img {
+  flex: 1 1 calc();
+  color: #fff;
+  text-align: center;
+  padding: 1% 0;
+  font-size: 1.5rem;
+  position: relative;
+}
+.card-grid{
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.card1 img{
+  width: 280px;
+  height: 60vh;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.06);
+}
+.card1 p{
+  position: absolute;
+  top: 80%;
+  left: 1%;
+
+}
+.category p{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: var(--whiote);
+  padding: 0 5%;
+  font-family: Helvetica,;
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .img img{
+    flex: 1 1 calc();
+  }
+}
+@media (max-width: 500px) {
+  .img img{
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 450px) {
+  .img img{
+    width: 300px;
+    height: 40vh;
+  }
+  .img{
+    padding: auto;
+  }
+  .images{
+    padding: 0% ;
+  }
+}
+ 
+/* -------------------- */
+                  /* card */
+.offers{
+  margin-top: 1%;
+  padding: 0 1%;
+   max-width: 1200px;      /* constrain to a nice max width */
+  margin-left: auto;
+  margin-right: auto;
+}
+.offers p{
+  color: var(--whiote);
+  text-align: center;
+  font-size: 24px;
+  font-family: var(--a);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.card{
+ display: grid;
+  gap: 16px;
+  /* create an adaptive row-based grid:
+     each column is at least 220px, but expands to fill the row */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: start;
+  /* remove the old width/border that belonged to a single card */
+  background: transparent;
+  padding: 0;
+  
+}
+.card img{
+  width: 100%;
+  height: 180px;           /* fixed-ish height keeps rows aligned */
+  object-fit: cover;       /* important to maintain aspect and cropping */
+  border-radius: 8px;
+  display: block;
+  
+}
+.card-in{
+   background-color: var(--back-light);
+  border: 1px solid rgba(138,138,138,0.25);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  transition: transform .18s ease, box-shadow .18s ease;
+  cursor: pointer;
+}
+.card-in:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.5);
+}
+.card-in .product-name{
+  font-size: 14px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--whiote);
+}
+
+/* price row */
+.price-row{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.price-row p{
+  margin: 0;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.price-row .new{
+  font-size: 15px;
+  color: var(--accent);
+}
+.price-row .old{
+  font-size: 12px;
+  text-decoration: line-through;
+  color: grey;
+}
+
+/* button area aligns to bottom if there's extra vertical space */
+.btn{
+  margin-top: auto; /* push button to bottom of card */
+}
+.btn button{
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg,#5B2DF6,#AC5BFF); /* example */
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* responsive adjustments: reduce columns on small screens */
+@media (max-width: 520px){
+ .card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;   /* centers the cards horizontally */
+    gap: 16px;
+  }
+
+  /* fix each card width */
+  .card-in {
+    width: 300px;
+  }
+
+  .card-in img {
+    height: 160px;
+  }
+}
+/* ................................................................... */
+
+
+

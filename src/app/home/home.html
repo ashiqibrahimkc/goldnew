@@ -1,0 +1,43 @@
+<div class="main">
+    <div class="banner">
+        <img src="/assets/image/bannerimage.png" alt="">
+        <div class="banner-text">
+            <h1>Elegance Redefined</h1>
+            <p>Discover exquisite gold jewelry crafted for a lifetime</p>
+            <button>Explore our collections</button>
+        </div>
+    </div>
+    <!-- category -->
+    <div class="category">
+        <p>Shop by category</p>
+        <div class="card-grid">
+            <div class="card1" *ngFor="let pr of categories">
+            <div class="img">
+                <img [src]="pr.img" alt="">
+                <p>{{pr.title}} </p>
+            </div>
+        </div>  
+        </div>
+    </div>
+    <!-- offers -->
+    <div  class="offers" >
+        <p>Today's Offers</p>
+        <div class="card" >
+          <div class="card-in" *ngFor="let category of randomCategories">
+              <img [src]="category.img">
+            <p class="product-name">{{category.title}} </p>
+            <div class="price-row">
+                <p class="new">₹{{category.new}}.00 </p>
+                <p class="old">₹{{category.old}}.00 </p>
+            </div>
+            <div class="btn">
+                <button>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    
+
+</div>

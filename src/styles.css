@@ -1,0 +1,25 @@
+:root {
+  --footer-bg: #150a28;
+  --card: #151221;
+  --text: #d6d3e6;
+  --muted: #a6a1bd;
+  --line: #2a2639;
+  --accent: #8a2be2;
+  --accent-strong: #a24bf0;
+  --top-color : #d6c1ff;
+  --link : #e5e5e5;
+  --background : #24113f;
+  --whiote : #ffffff;
+  --grey : grey
+  --radius: 16px;
+  --a : helvetica;
+  --b : poppins;
+  --back-light:#130821;
+   --max-width: 1280px;
+    --gap: 32px;
+}
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
