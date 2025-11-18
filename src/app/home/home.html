@@ -11,7 +11,7 @@
     <div class="category">
         <p>Shop by category</p>
         <div class="card-grid">
-            <div class="card1" *ngFor="let pr of categories">
+            <div class="card1" *ngFor="let pr of randomCategories">
             <div class="img">
                 <img [src]="pr.img" alt="">
                 <p>{{pr.title}} </p>
@@ -36,8 +36,26 @@
           </div>
         </div>
     </div>
-
-
+                    <!-- featured Collection  -->
+    <div class="featured">
+        <p>Featuerd Collections</p>
+        <div class="f-images">
+            <div class="img">
+                <img src="../../assets/image/bridal.png">
+                <div class="text">
+                    <p class="f-main">The Bridal Collection</p>
+                    <p class="f-normal">Timeless pieces for your special day.</p>
+                </div>
+            </div>
+            <div class="img">
+                <img src="../../assets/image/vintage.png">
+                <div class="text">
+                    <p class="f-main">Vintage Classics</p>
+                    <p class="f-normal">Heirloom-worthy designs with a story.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     
 
 </div>

@@ -232,6 +232,37 @@ img{
   }
 }
 /* ................................................................... */
-
-
+       /* featured */
+       .featured{
+        margin-top: 5%;
+        padding: 0 5%
+       }
+       .f-images{
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+       }
+       .f-images img{
+        width: 100%;
+        height: 55vh;
+        border-radius: 10px;
+        position: relative;
+       }
+       .f-images .text{
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        color: white;
+       }
+       .f-main{
+        display: flex;
+        justify-content: flex-start;
+        font-family: poppins, sans-serif;
+        font-weight: bold;
+       }
+       .f-normal{
+        font-size: 14px;
+        display: flex;
+        justify-content: flex-start;
+       }
 
