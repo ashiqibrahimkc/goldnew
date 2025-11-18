@@ -237,7 +237,7 @@ img{
         margin-top: 5%;
         padding: 0 5%
        }
-        .featured p{
+        .f-head{
           color: var(--whiote);
           font-size: 24px;
           font-family: poppins, sans-serif;
