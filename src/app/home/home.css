@@ -237,6 +237,13 @@ img{
         margin-top: 5%;
         padding: 0 5%
        }
+        .featured p{
+          color: var(--whiote);
+          font-size: 24px;
+          font-family: poppins, sans-serif;
+          font-weight: bold;
+          margin-bottom: 2rem;
+        }
        .f-images{
         display: flex;
         justify-content: center;
